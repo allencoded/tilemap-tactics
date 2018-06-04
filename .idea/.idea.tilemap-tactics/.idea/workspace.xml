@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3b794457-daef-4c59-b3a6-5de42c4282b8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameTiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameTiles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MouseInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MouseInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Token.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Token.cs" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Token.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Token.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+              <folding>
+                <marker date="1528094370909" expanded="false" signature="6:106" ph="..." />
+                <marker date="1528094370909" expanded="true" signature="143:1785" ph="{...}" />
+                <marker date="1528094370909" expanded="true" signature="476:542" ph="{...}" />
+                <marker date="1528094370909" expanded="true" signature="585:676" ph="{...}" />
+                <marker date="1528094370909" expanded="true" signature="703:734" ph="{...}" />
+                <marker date="1528094370909" expanded="true" signature="770:921" ph="{...}" />
+                <marker date="1528094370909" expanded="true" signature="971:1268" ph="{...}" />
+                <marker date="1528094370909" expanded="true" signature="1013:1239" ph="{...}" />
+                <marker date="1528094370909" expanded="true" signature="1061:1235" ph="{...}" />
+                <marker date="1528094370909" expanded="true" signature="1330:1602" ph="{...}" />
+                <marker date="1528094370909" expanded="true" signature="1362:1588" ph="{...}" />
+                <marker date="1528094370909" expanded="true" signature="1624:1783" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldTile.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Data/WorldTile.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <marker date="1528082117806" expanded="false" signature="6:106" ph="..." />
+                <marker date="1528082117806" expanded="true" signature="131:536" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestOurTile.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/TestOurTile.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1527968933271" expanded="false" signature="6:106" ph="..." />
+                <marker date="1527968933271" expanded="true" signature="149:778" ph="{...}" />
+                <marker date="1527968933271" expanded="true" signature="230:776" ph="{...}" />
+                <marker date="1527968933271" expanded="true" signature="266:773" ph="{...}" />
+                <marker date="1527968933271" expanded="true" signature="569:769" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameTiles.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameTiles.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+              <folding>
+                <marker date="1528093897058" expanded="false" signature="6:106" ph="..." />
+                <marker date="1528093897058" expanded="true" signature="147:1073" ph="{...}" />
+                <marker date="1528093897058" expanded="true" signature="279:419" ph="{...}" />
+                <marker date="1528093897058" expanded="true" signature="307:335" ph="{...}" />
+                <marker date="1528093897058" expanded="true" signature="364:396" ph="{...}" />
+                <marker date="1528093897058" expanded="true" signature="484:1071" ph="{...}" />
+                <marker date="1528093897058" expanded="true" signature="602:1068" ph="{...}" />
+                <marker date="1528093897058" expanded="true" signature="743:1019" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MouseInput.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/MouseInput.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+              <folding>
+                <marker date="1528094301856" expanded="false" signature="6:78" ph="..." />
+                <marker date="1528094301856" expanded="true" signature="120:1413" ph="{...}" />
+                <marker date="1528094301856" expanded="true" signature="219:342" ph="{...}" />
+                <marker date="1528094301856" expanded="true" signature="255:279" ph="{...}" />
+                <marker date="1528094301856" expanded="true" signature="314:339" ph="{...}" />
+                <marker date="1528094301856" expanded="true" signature="370:797" ph="{...}" />
+                <marker date="1528094301856" expanded="true" signature="398:466" ph="{...}" />
+                <marker date="1528094301856" expanded="true" signature="682:794" ph="{...}" />
+                <marker date="1528094301856" expanded="true" signature="740:789" ph="{...}" />
+                <marker date="1528094301856" expanded="true" signature="826:1118" ph="{...}" />
+                <marker date="1528094301856" expanded="true" signature="854:1069" ph="{...}" />
+                <marker date="1528094301856" expanded="true" signature="1076:1115" ph="{...}" />
+                <marker date="1528094301856" expanded="true" signature="1154:1221" ph="{...}" />
+                <marker date="1528094301856" expanded="true" signature="1270:1411" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinding/Pathfinder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Token.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameTiles.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/WorldTile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MouseInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestOurTile.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding/Pathfinder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameTiles.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MouseInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Token.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="63" />
+    <option name="y" value="191" />
+    <option name="width" value="2019" />
+    <option name="height" value="1041" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="tilemap-tactics (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="tilemap-tactics (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="tilemap-tactics (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="tilemap-tactics (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="tilemap-tactics (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Data" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="tilemap-tactics (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Pathfinding" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="215436">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="215436" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b794457-daef-4c59-b3a6-5de42c4282b8" name="Default" comment="" />
+      <created>1528091847183</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528091847183</updated>
+      <workItem from="1528091849070" duration="229000" />
+      <workItem from="1528092168143" duration="305000" />
+      <workItem from="1528092489107" duration="219000" />
+      <workItem from="1528092721008" duration="1653000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2406000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32890365" />
+      <window_info anchor="bottom" id="Unit Tests" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0712603" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" />
+      <window_info anchor="bottom" id="Build" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.23239437" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39977852" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Token.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          <folding>
+            <marker date="1528094370909" expanded="false" signature="6:106" ph="..." />
+            <marker date="1528094370909" expanded="true" signature="143:1785" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="476:542" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="585:676" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="703:734" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="770:921" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="971:1268" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1013:1239" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1061:1235" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1330:1602" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1362:1588" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1624:1783" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Data/WorldTile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <marker date="1528082117806" expanded="false" signature="6:106" ph="..." />
+            <marker date="1528082117806" expanded="true" signature="131:536" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinding/Pathfinder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <marker date="1528093601135" expanded="false" signature="6:106" ph="..." />
+            <marker date="1528093601135" expanded="true" signature="148:4411" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="663:730" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="734:904" ph="/// Returns all the selectable world tiles based on movement. ... " />
+            <marker date="1528093601135" expanded="true" signature="991:1270" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="1307:1697" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="1355:1509" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="1771:2041" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="1913:1981" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2044:2160" ph="/// Loads all the WorldTiles that are traversable by the player into Dictionary grid. ... " />
+            <marker date="1528093601135" expanded="true" signature="2188:2605" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2240:2602" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2352:2447" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2455:2598" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2608:2712" ph="/// Preforms our BreadthFirstSearch on WorldTiles in the Dictionary grid. ... " />
+            <marker date="1528093601135" expanded="true" signature="2747:3109" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2817:3106" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2924:3102" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="3112:3171" ph="/// Sets our WorldTile color ... " />
+            <marker date="1528093601135" expanded="true" signature="3227:3356" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="3359:3595" ph="/// Explores the neighbours of our currentSearchCenter by provided directions (up down left right). ... " />
+            <marker date="1528093601135" expanded="true" signature="3629:3903" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="3709:3900" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="3841:3896" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="3906:4008" ph="/// Handles Queueing new neighbour WorldTile. Also increments our Cost. ... " />
+            <marker date="1528093601135" expanded="true" signature="4070:4409" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="4182:4201" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameTiles.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding>
+            <marker date="1528093897058" expanded="false" signature="6:106" ph="..." />
+            <marker date="1528093897058" expanded="true" signature="147:1073" ph="{...}" />
+            <marker date="1528093897058" expanded="true" signature="279:419" ph="{...}" />
+            <marker date="1528093897058" expanded="true" signature="307:335" ph="{...}" />
+            <marker date="1528093897058" expanded="true" signature="364:396" ph="{...}" />
+            <marker date="1528093897058" expanded="true" signature="484:1071" ph="{...}" />
+            <marker date="1528093897058" expanded="true" signature="602:1068" ph="{...}" />
+            <marker date="1528093897058" expanded="true" signature="743:1019" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Token.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <marker date="1528094370909" expanded="false" signature="6:106" ph="..." />
+            <marker date="1528094370909" expanded="true" signature="143:1785" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="476:542" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="585:676" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="703:734" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="770:921" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="971:1268" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1013:1239" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1061:1235" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1330:1602" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1362:1588" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1624:1783" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Data/WorldTile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <marker date="1528082117806" expanded="false" signature="6:106" ph="..." />
+            <marker date="1528082117806" expanded="true" signature="131:536" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinding/Pathfinder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <marker date="1528093601135" expanded="false" signature="6:106" ph="..." />
+            <marker date="1528093601135" expanded="true" signature="148:4411" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="663:730" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="734:904" ph="/// Returns all the selectable world tiles based on movement. ... " />
+            <marker date="1528093601135" expanded="true" signature="991:1270" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="1307:1697" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="1355:1509" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="1771:2041" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="1913:1981" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2044:2160" ph="/// Loads all the WorldTiles that are traversable by the player into Dictionary grid. ... " />
+            <marker date="1528093601135" expanded="true" signature="2188:2605" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2240:2602" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2352:2447" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2455:2598" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2608:2712" ph="/// Preforms our BreadthFirstSearch on WorldTiles in the Dictionary grid. ... " />
+            <marker date="1528093601135" expanded="true" signature="2747:3109" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2817:3106" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="2924:3102" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="3112:3171" ph="/// Sets our WorldTile color ... " />
+            <marker date="1528093601135" expanded="true" signature="3227:3356" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="3359:3595" ph="/// Explores the neighbours of our currentSearchCenter by provided directions (up down left right). ... " />
+            <marker date="1528093601135" expanded="true" signature="3629:3903" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="3709:3900" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="3841:3896" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="3906:4008" ph="/// Handles Queueing new neighbour WorldTile. Also increments our Cost. ... " />
+            <marker date="1528093601135" expanded="true" signature="4070:4409" ph="{...}" />
+            <marker date="1528093601135" expanded="true" signature="4182:4201" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MouseInput.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+          <folding>
+            <marker date="1528094301856" expanded="false" signature="6:78" ph="..." />
+            <marker date="1528094301856" expanded="true" signature="120:1413" ph="{...}" />
+            <marker date="1528094301856" expanded="true" signature="219:342" ph="{...}" />
+            <marker date="1528094301856" expanded="true" signature="255:279" ph="{...}" />
+            <marker date="1528094301856" expanded="true" signature="314:339" ph="{...}" />
+            <marker date="1528094301856" expanded="true" signature="370:797" ph="{...}" />
+            <marker date="1528094301856" expanded="true" signature="398:466" ph="{...}" />
+            <marker date="1528094301856" expanded="true" signature="682:794" ph="{...}" />
+            <marker date="1528094301856" expanded="true" signature="740:789" ph="{...}" />
+            <marker date="1528094301856" expanded="true" signature="826:1118" ph="{...}" />
+            <marker date="1528094301856" expanded="true" signature="854:1069" ph="{...}" />
+            <marker date="1528094301856" expanded="true" signature="1076:1115" ph="{...}" />
+            <marker date="1528094301856" expanded="true" signature="1154:1221" ph="{...}" />
+            <marker date="1528094301856" expanded="true" signature="1270:1411" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/TestOurTile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1527968933271" expanded="false" signature="6:106" ph="..." />
+            <marker date="1527968933271" expanded="true" signature="149:778" ph="{...}" />
+            <marker date="1527968933271" expanded="true" signature="230:776" ph="{...}" />
+            <marker date="1527968933271" expanded="true" signature="266:773" ph="{...}" />
+            <marker date="1527968933271" expanded="true" signature="569:769" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameTiles.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <marker date="1528093897058" expanded="false" signature="6:106" ph="..." />
+            <marker date="1528093897058" expanded="true" signature="147:1073" ph="{...}" />
+            <marker date="1528093897058" expanded="true" signature="279:419" ph="{...}" />
+            <marker date="1528093897058" expanded="true" signature="307:335" ph="{...}" />
+            <marker date="1528093897058" expanded="true" signature="364:396" ph="{...}" />
+            <marker date="1528093897058" expanded="true" signature="484:1071" ph="{...}" />
+            <marker date="1528093897058" expanded="true" signature="602:1068" ph="{...}" />
+            <marker date="1528093897058" expanded="true" signature="743:1019" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Token.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <marker date="1528094370909" expanded="false" signature="6:106" ph="..." />
+            <marker date="1528094370909" expanded="true" signature="143:1785" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="476:542" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="585:676" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="703:734" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="770:921" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="971:1268" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1013:1239" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1061:1235" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1330:1602" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1362:1588" ph="{...}" />
+            <marker date="1528094370909" expanded="true" signature="1624:1783" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Data/WorldTile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <marker date="1528082117806" expanded="false" signature="6:106" ph="..." />
+            <marker date="1528082117806" expanded="true" signature="131:536" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

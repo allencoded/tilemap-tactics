@@ -6,7 +6,7 @@ public class MouseInput : MonoBehaviour {
 	private Token selectedTokenScript;
 
 	// Update is called once per frame
-	void Update () {
+	private void Update () {
 		if (Input.GetMouseButtonDown(0))
 		{
 			LeftClick();
@@ -17,7 +17,7 @@ public class MouseInput : MonoBehaviour {
 		}
 	}
 
-	void LeftClick() {
+	private void LeftClick() {
 		if (selectedTokenScript)
 		{
 			selectedTokenScript.PrintName();
@@ -25,7 +25,7 @@ public class MouseInput : MonoBehaviour {
 		}
 		
 		Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+		var hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
 		// Find out if we hit a child component
 		 foreach(Transform t in transform)
@@ -38,30 +38,29 @@ public class MouseInput : MonoBehaviour {
 		 }
 	}
 
-	void RightClick() {
+	private void RightClick() {
 		if (selectedTokenScript)
 		{
-			Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			Vector3Int worldPoint = new Vector3Int(Mathf.FloorToInt(point.x), Mathf.FloorToInt(point.y), 0);
+			var point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			var worldPoint = new Vector3Int(Mathf.FloorToInt(point.x), Mathf.FloorToInt(point.y), 0);
 			selectedTokenScript.MoveToken(worldPoint);
 		}
 		else
 		{
 			print("No Selected Token");
-			return;
 		}
 	}
 
-	void ClearOldSelection() 
+	private void ClearOldSelection() 
 	{
 		selectedTokenScript.Reset();
 		selectedTokenScript = null;
 	}
 
-	void HandleTokenSelected(Transform t) 
+	private void HandleTokenSelected(Component t) 
 	{
 		selectedTokenScript = t.GetComponent<Token>();
-		selectedTokenScript.isSelected = true;
+		selectedTokenScript.IsSelected = true;
 		selectedTokenScript.FindSelectableTiles();
 	}
 }

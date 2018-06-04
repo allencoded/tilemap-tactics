@@ -5,23 +5,23 @@ using UnityEngine.Tilemaps;
 
 public class Token : MonoBehaviour {
 	/* TODO SCRIPTABLT OBJECT Tokens: isEnemy, movement, amount moved, health, armor, abilites, isSelected */
-	public int tokenMovementDistance = 7;
-	public bool isEnemy = false;
-	public List<WorldTile> selectableTiles;
-	public WorldTile tokenLocation;
-	public bool isSelected;
+	public int TokenMovementDistance = 7;
+	public bool IsEnemy;
+	public List<WorldTile> SelectableTiles;
+	public WorldTile TokenLocation;
+	public bool IsSelected;
 
 	// Use this for initialization
-	void Start () 
+	private void Start () 
 	{
 		GetTokenWorldTileLocation();
-		print(tokenLocation.Name);
+		print(TokenLocation.Name);
 	}
 
-	public void GetTokenWorldTileLocation()
+	private void GetTokenWorldTileLocation()
 	{
 		var tiles = GameTiles.instance.tiles;
-		tokenLocation = tiles[transform.position];
+		TokenLocation = tiles[transform.position];
 	}
 
 	public void PrintName() 
@@ -31,32 +31,30 @@ public class Token : MonoBehaviour {
 
 	public void FindSelectableTiles()
 	{
-		Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
-		selectableTiles = pathfinder.GetSelectableWorldTiles(tokenMovementDistance, tokenLocation);
+		var pathfinder = FindObjectOfType<Pathfinder>();
+		SelectableTiles = pathfinder.GetSelectableWorldTiles(TokenMovementDistance, TokenLocation);
 	}
 
 	public void MoveToken(Vector3Int clickedPoint) 
 	{
-		foreach(var tile in selectableTiles)
+		foreach(var tile in SelectableTiles)
 		{
-			if (clickedPoint == tile.WorldLocation) 
-			{
-				Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
-				var path = pathfinder.CreatePath(selectableTiles, tile);
-				StartCoroutine(FollowPath(path));
-				return;
-			}
+			if (clickedPoint != tile.WorldLocation) continue;
+			var pathfinder = FindObjectOfType<Pathfinder>();
+			var path = pathfinder.CreatePath(SelectableTiles, tile);
+			StartCoroutine(FollowPath(path));
+			return;
 		}
 		print("No Valid Path");
 	}
 
-	IEnumerator FollowPath(List<WorldTile> path)
+	private IEnumerator FollowPath(IEnumerable<WorldTile> path)
 	{
-		foreach (WorldTile tile in path)
+		foreach (var tile in path)
 		{
-			Debug.Log("Moving to :" + tile.WorldLocation.ToString());
+			Debug.Log("Moving to :" + tile.WorldLocation);
 			transform.position = new Vector3(tile.WorldLocation.x, tile.WorldLocation.y, tile.WorldLocation.z);
-			tokenLocation = tile;
+			TokenLocation = tile;
 			yield return new WaitForSeconds(1f);
 		}
 		Reset();
@@ -64,9 +62,9 @@ public class Token : MonoBehaviour {
 
 	public void Reset()
 	{
-		Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
+		var pathfinder = FindObjectOfType<Pathfinder>();
 		pathfinder.ResetSelectableTiles();
-		isSelected = false;
-		selectableTiles = new List<WorldTile>();
+		IsSelected = false;
+		SelectableTiles = new List<WorldTile>();
 	}
 }

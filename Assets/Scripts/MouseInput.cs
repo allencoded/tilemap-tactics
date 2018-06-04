@@ -25,23 +25,21 @@ public class MouseInput : MonoBehaviour {
 		}
 		
 		Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		var hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+		RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
 		// Find out if we hit a child component
 		 foreach(Transform t in transform)
 		 {
-			if (hit.collider && hit.collider.name == t.name) 
-			{
-				HandleTokenSelected(t);
-				break;
-			}
+			 if (!hit.collider || hit.collider.name != t.name) continue;
+			 HandleTokenSelected(t);
+			 break;
 		 }
 	}
 
 	private void RightClick() {
 		if (selectedTokenScript)
 		{
-			var point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			var worldPoint = new Vector3Int(Mathf.FloorToInt(point.x), Mathf.FloorToInt(point.y), 0);
 			selectedTokenScript.MoveToken(worldPoint);
 		}

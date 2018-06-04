@@ -27,7 +27,7 @@ public class GameTiles : MonoBehaviour {
 	private void GetWorldTiles () 
 	{
         tiles = new Dictionary<Vector3, WorldTile>();
-		foreach (var pos in Tilemap.cellBounds.allPositionsWithin)
+		foreach (Vector3Int pos in Tilemap.cellBounds.allPositionsWithin)
 		{
 			var localPlace = new Vector3Int(pos.x, pos.y, pos.z);
 

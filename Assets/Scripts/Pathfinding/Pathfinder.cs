@@ -5,19 +5,18 @@ using UnityEngine.Tilemaps;
 
 public class Pathfinder : MonoBehaviour {
 
-	[SerializeField] WorldTile startTile, endTile;
-	Dictionary<Vector3, WorldTile> grid = new Dictionary<Vector3, WorldTile>();
+	[SerializeField] WorldTile _startTile, _endTile;
+	Dictionary<Vector3, WorldTile> _grid = new Dictionary<Vector3, WorldTile>();
 	bool isRunning = true;
 
 	// BFS Specific Stuff
-	Queue<WorldTile> queue = new Queue<WorldTile>();
-	WorldTile currentSearchCenter; // this is for when its looping it knows where its searching from
-	List<WorldTile> selectableTiles = new List<WorldTile>(); 
-
-	public int tokenMovementDistance;
+	private Queue<WorldTile> _queue = new Queue<WorldTile>();
+	private WorldTile _currentSearchCenter; // this is for when its looping it knows where its searching from
+	private List<WorldTile> _selectableTiles = new List<WorldTile>(); 
+	private int TokenMovementDistance;
 
 	// This might go on the tile rule so each tile has its own movement
-	Vector3[] directions = 
+	private readonly Vector3[] _directions = 
 	{
 		Vector3.up,
 		Vector3.right,
@@ -32,40 +31,40 @@ public class Pathfinder : MonoBehaviour {
 	public List<WorldTile> GetSelectableWorldTiles(int distance, WorldTile tokenLocation)
 	{
 		tokenLocation.Cost = 1; // TODO: BUG FIX HERE. The tokenLocation is never getting its cost reset so I hard reset it here but this is wrong.
-		startTile = tokenLocation;
-		tokenMovementDistance = distance;
+		_startTile = tokenLocation;
+		TokenMovementDistance = distance;
 		LoadBlocks();
 		BreadthFirstSearch();
-		return selectableTiles;
+		return _selectableTiles;
 	}
 
 	public void ResetSelectableTiles()
 	{
-		foreach(WorldTile tile in selectableTiles)
+		foreach(WorldTile tile in _selectableTiles)
 		{
 			tile.Cost = 1; // TODO: We can't always assume tiles are = to 1 this is wrong.
 			tile.IsExplored = false;
 			SetTileColor(tile, Color.white);
 		}
-		startTile = null;
-		grid = new Dictionary<Vector3, WorldTile>();
-		queue = new Queue<WorldTile>();
-		currentSearchCenter = new WorldTile();
-		selectableTiles = new List<WorldTile>();
+		_startTile = null;
+		_grid = new Dictionary<Vector3, WorldTile>();
+		_queue = new Queue<WorldTile>();
+		_currentSearchCenter = new WorldTile();
+		_selectableTiles = new List<WorldTile>();
 	}
 
 	public List<WorldTile> CreatePath(List<WorldTile> tiles, WorldTile end)
 	{	
-		List<WorldTile> test = new List<WorldTile>();
+		var test = new List<WorldTile>();
 		test.Add(end);
 		WorldTile previous = end.ExploredFrom;
-		while (previous != startTile)
+		while (previous != _startTile)
 		{
 			test.Add(previous);
 			previous = previous.ExploredFrom;
 		}
 
-		test.Add(startTile);
+		test.Add(_startTile);
 		test.Reverse();
 		return test;
 	}
@@ -77,15 +76,15 @@ public class Pathfinder : MonoBehaviour {
 	{
 		foreach (var tile in GameTiles.instance.tiles)
 		{
-			var pos = tile.Value.WorldLocation;
-			bool isOverlapping = grid.ContainsKey(pos);
+			Vector3 pos = tile.Value.WorldLocation;
+			var isOverlapping = _grid.ContainsKey(pos);
 			if (isOverlapping)
 			{
 				Debug.Log("Overlapping block" + tile + ". Skipping but you need to remove it.");
 			}
 			else
 			{
-				grid.Add(pos, tile.Value); // I rather prob use a struct because here if we change a value on a tile its changed on the instance
+				_grid.Add(pos, tile.Value); // I rather prob use a struct because here if we change a value on a tile its changed on the instance
 			}
 		}
 	}
@@ -95,20 +94,20 @@ public class Pathfinder : MonoBehaviour {
 	/// </summary>
 	private void BreadthFirstSearch()
 	{
-		queue.Enqueue(startTile);
+		_queue.Enqueue(_startTile);
 
-		while(queue.Count > 0 && isRunning)
+		while(_queue.Count > 0 && isRunning)
 		{
-			currentSearchCenter = queue.Dequeue();
+			_currentSearchCenter = _queue.Dequeue();
 			
-			if (currentSearchCenter.Cost < tokenMovementDistance)
+			if (_currentSearchCenter.Cost < TokenMovementDistance)
 			{
-				selectableTiles.Add(currentSearchCenter);
-				SetTileColor(currentSearchCenter, Color.green);
+				_selectableTiles.Add(_currentSearchCenter);
+				SetTileColor(_currentSearchCenter, Color.green);
 
 				ExploreNeighbours();
 
-				currentSearchCenter.IsExplored = true;
+				_currentSearchCenter.IsExplored = true;
 			}
 		}
 	}
@@ -116,7 +115,7 @@ public class Pathfinder : MonoBehaviour {
 	/// <summary>
 	/// Sets our WorldTile color
 	/// </summary>
-	private void SetTileColor(WorldTile tile, Color color)
+	private static void SetTileColor(WorldTile tile, Color color)
 	{
 		tile.TilemapMember.SetTileFlags(tile.LocalPlace, TileFlags.None);
 		tile.TilemapMember.SetColor(tile.LocalPlace, color);
@@ -130,10 +129,10 @@ public class Pathfinder : MonoBehaviour {
 	{
 		if (!isRunning) { return; }
 		
-		foreach (Vector3 direction in directions)
+		foreach (Vector3 direction in _directions)
 		{
-			Vector3 neighbourCoordinates = currentSearchCenter.WorldLocation + direction;
-			if (grid.ContainsKey(neighbourCoordinates))
+			Vector3 neighbourCoordinates = _currentSearchCenter.WorldLocation + direction;
+			if (_grid.ContainsKey(neighbourCoordinates))
 			{
 				QueueNewNeighbour(neighbourCoordinates);
 			}
@@ -145,13 +144,13 @@ public class Pathfinder : MonoBehaviour {
 	/// </summary>
 	private void QueueNewNeighbour(Vector3 neighbourCoordinates)
 	{
-		WorldTile neighbour = grid[neighbourCoordinates];
-		if (neighbour.IsExplored || queue.Contains(neighbour))
+		WorldTile neighbour = _grid[neighbourCoordinates];
+		if (neighbour.IsExplored || _queue.Contains(neighbour))
 		{
 			return;
 		}
-		queue.Enqueue(neighbour);
-		neighbour.ExploredFrom = currentSearchCenter;
-		neighbour.Cost = 1 + currentSearchCenter.Cost; // TODO: This isn't right it assumes all tiles are 1 Cost and using wrong field
+		_queue.Enqueue(neighbour);
+		neighbour.ExploredFrom = _currentSearchCenter;
+		neighbour.Cost = 1 + _currentSearchCenter.Cost; // TODO: This isn't right it assumes all tiles are 1 Cost and using wrong field
 	}
 }

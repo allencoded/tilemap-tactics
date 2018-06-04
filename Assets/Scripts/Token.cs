@@ -37,7 +37,7 @@ public class Token : MonoBehaviour {
 
 	public void MoveToken(Vector3Int clickedPoint) 
 	{
-		foreach(var tile in SelectableTiles)
+		foreach(WorldTile tile in SelectableTiles)
 		{
 			if (clickedPoint != tile.WorldLocation) continue;
 			var pathfinder = FindObjectOfType<Pathfinder>();
@@ -50,7 +50,7 @@ public class Token : MonoBehaviour {
 
 	private IEnumerator FollowPath(IEnumerable<WorldTile> path)
 	{
-		foreach (var tile in path)
+		foreach (WorldTile tile in path)
 		{
 			Debug.Log("Moving to :" + tile.WorldLocation);
 			transform.position = new Vector3(tile.WorldLocation.x, tile.WorldLocation.y, tile.WorldLocation.z);

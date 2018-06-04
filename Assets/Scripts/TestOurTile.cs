@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class TestOurTile : MonoBehaviour {
-	private WorldTile tile;
+	private WorldTile _tile;
 	
 	// Update is called once per frame
 	private void Update () {
@@ -15,11 +15,11 @@ public class TestOurTile : MonoBehaviour {
 
 			var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
 
-			if (tiles.TryGetValue(worldPoint, out tile)) 
+			if (tiles.TryGetValue(worldPoint, out _tile)) 
 			{
-				print("Tile " + tile.Name + " costs: " + tile.Cost);
-				tile.TilemapMember.SetTileFlags(tile.LocalPlace, TileFlags.None);
-				tile.TilemapMember.SetColor(tile.LocalPlace, Color.green);
+				print("Tile " + _tile.Name + " costs: " + _tile.Cost);
+				_tile.TilemapMember.SetTileFlags(_tile.LocalPlace, TileFlags.None);
+				_tile.TilemapMember.SetColor(_tile.LocalPlace, Color.green);
 			}
 		}
 	}

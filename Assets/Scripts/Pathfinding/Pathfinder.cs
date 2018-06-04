@@ -5,15 +5,15 @@ using UnityEngine.Tilemaps;
 
 public class Pathfinder : MonoBehaviour {
 
-	[SerializeField] WorldTile _startTile, _endTile;
-	Dictionary<Vector3, WorldTile> _grid = new Dictionary<Vector3, WorldTile>();
-	bool isRunning = true;
+	[SerializeField] private WorldTile _startTile;
+	private Dictionary<Vector3, WorldTile> _grid = new Dictionary<Vector3, WorldTile>();
+	private const bool IsRunning = true;
 
 	// BFS Specific Stuff
 	private Queue<WorldTile> _queue = new Queue<WorldTile>();
 	private WorldTile _currentSearchCenter; // this is for when its looping it knows where its searching from
 	private List<WorldTile> _selectableTiles = new List<WorldTile>(); 
-	private int TokenMovementDistance;
+	private int _tokenMovementDistance;
 
 	// This might go on the tile rule so each tile has its own movement
 	private readonly Vector3[] _directions = 
@@ -32,7 +32,7 @@ public class Pathfinder : MonoBehaviour {
 	{
 		tokenLocation.Cost = 1; // TODO: BUG FIX HERE. The tokenLocation is never getting its cost reset so I hard reset it here but this is wrong.
 		_startTile = tokenLocation;
-		TokenMovementDistance = distance;
+		_tokenMovementDistance = distance;
 		LoadBlocks();
 		BreadthFirstSearch();
 		return _selectableTiles;
@@ -53,20 +53,19 @@ public class Pathfinder : MonoBehaviour {
 		_selectableTiles = new List<WorldTile>();
 	}
 
-	public List<WorldTile> CreatePath(List<WorldTile> tiles, WorldTile end)
-	{	
-		var test = new List<WorldTile>();
-		test.Add(end);
-		WorldTile previous = end.ExploredFrom;
+	public IEnumerable<WorldTile> CreatePath(List<WorldTile> tiles, WorldTile endTile)
+	{
+		var path = new List<WorldTile> {endTile};
+		WorldTile previous = endTile.ExploredFrom;
 		while (previous != _startTile)
 		{
-			test.Add(previous);
+			path.Add(previous);
 			previous = previous.ExploredFrom;
 		}
 
-		test.Add(_startTile);
-		test.Reverse();
-		return test;
+		path.Add(_startTile);
+		path.Reverse();
+		return path;
 	}
 
 	/// <summary>
@@ -96,19 +95,18 @@ public class Pathfinder : MonoBehaviour {
 	{
 		_queue.Enqueue(_startTile);
 
-		while(_queue.Count > 0 && isRunning)
+		while(_queue.Count > 0 && IsRunning)
 		{
 			_currentSearchCenter = _queue.Dequeue();
+
+			if (_currentSearchCenter.Cost >= _tokenMovementDistance) continue;
 			
-			if (_currentSearchCenter.Cost < TokenMovementDistance)
-			{
-				_selectableTiles.Add(_currentSearchCenter);
-				SetTileColor(_currentSearchCenter, Color.green);
+			_selectableTiles.Add(_currentSearchCenter);
+			SetTileColor(_currentSearchCenter, Color.green);
 
-				ExploreNeighbours();
+			ExploreNeighbours();
 
-				_currentSearchCenter.IsExplored = true;
-			}
+			_currentSearchCenter.IsExplored = true;
 		}
 	}
 
@@ -127,7 +125,7 @@ public class Pathfinder : MonoBehaviour {
 	/// </summary>
 	private void ExploreNeighbours()
 	{
-		if (!isRunning) { return; }
+		if (!IsRunning) { return; }
 		
 		foreach (Vector3 direction in _directions)
 		{

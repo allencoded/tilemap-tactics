@@ -14,10 +14,10 @@ public class WorldTile {
 
     public string Name { get; set; }
 
-    // Below is needed for Breadth First Searching
-    public bool isExplored { get; set; }
-
-    public WorldTile exploredFrom { get; set; }
-
     public int Cost { get; set; }
+
+    // Below is needed for Breadth First Searching
+    public bool IsExplored { get; set; }
+
+    public WorldTile ExploredFrom { get; set; }
 }

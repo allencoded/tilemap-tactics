@@ -6,7 +6,6 @@ using UnityEngine.Tilemaps;
 public class GameTiles : MonoBehaviour {
 	public static GameTiles instance;
 	public Tilemap tilemap;
-	//public List<WorldTile> tiles;
 
 	public Dictionary<Vector3, WorldTile> tiles;
 

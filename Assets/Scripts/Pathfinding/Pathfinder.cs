@@ -31,6 +31,7 @@ public class Pathfinder : MonoBehaviour {
 	/// </summary>
 	public List<WorldTile> GetSelectableWorldTiles(int distance, WorldTile tokenLocation)
 	{
+		tokenLocation.Cost = 1; // TODO: BUG FIX HERE. The tokenLocation is never getting its cost reset so I hard reset it here but this is wrong.
 		startTile = tokenLocation;
 		tokenMovementDistance = distance;
 		LoadBlocks();
@@ -42,13 +43,14 @@ public class Pathfinder : MonoBehaviour {
 	{
 		foreach(WorldTile tile in selectableTiles)
 		{
-			tile.Cost = 1;
-			tile.isExplored = false;
+			tile.Cost = 1; // TODO: We can't always assume tiles are = to 1 this is wrong.
+			tile.IsExplored = false;
 			SetTileColor(tile, Color.white);
 		}
 		startTile = null;
 		grid = new Dictionary<Vector3, WorldTile>();
 		queue = new Queue<WorldTile>();
+		currentSearchCenter = new WorldTile();
 		selectableTiles = new List<WorldTile>();
 	}
 
@@ -56,11 +58,11 @@ public class Pathfinder : MonoBehaviour {
 	{	
 		List<WorldTile> test = new List<WorldTile>();
 		test.Add(end);
-		WorldTile previous = end.exploredFrom;
+		WorldTile previous = end.ExploredFrom;
 		while (previous != startTile)
 		{
 			test.Add(previous);
-			previous = previous.exploredFrom;
+			previous = previous.ExploredFrom;
 		}
 
 		test.Add(startTile);
@@ -83,7 +85,7 @@ public class Pathfinder : MonoBehaviour {
 			}
 			else
 			{
-				grid.Add(pos, tile.Value);
+				grid.Add(pos, tile.Value); // I rather prob use a struct because here if we change a value on a tile its changed on the instance
 			}
 		}
 	}
@@ -106,7 +108,7 @@ public class Pathfinder : MonoBehaviour {
 
 				ExploreNeighbours();
 
-				currentSearchCenter.isExplored = true;
+				currentSearchCenter.IsExplored = true;
 			}
 		}
 	}
@@ -144,12 +146,12 @@ public class Pathfinder : MonoBehaviour {
 	private void QueueNewNeighbour(Vector3 neighbourCoordinates)
 	{
 		WorldTile neighbour = grid[neighbourCoordinates];
-		if (neighbour.isExplored || queue.Contains(neighbour))
+		if (neighbour.IsExplored || queue.Contains(neighbour))
 		{
 			return;
 		}
 		queue.Enqueue(neighbour);
-		neighbour.exploredFrom = currentSearchCenter;
+		neighbour.ExploredFrom = currentSearchCenter;
 		neighbour.Cost = 1 + currentSearchCenter.Cost; // TODO: This isn't right it assumes all tiles are 1 Cost and using wrong field
 	}
 }
